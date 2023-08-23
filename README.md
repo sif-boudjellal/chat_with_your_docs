@@ -36,6 +36,11 @@ chatdocs download
 ```
 ###  CTransformers & GPTQ model:
 
+install the `ctransformers` package using:
+```bash
+pip install ctransformers[gptq]
+```
+
 To change the C Transformers with GPTQ model, add and change the following in your `chatdocs.yml`:
 ```yaml
 ctransformers:
