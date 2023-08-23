@@ -1,0 +1,7 @@
+llm: gptq
+
+gptq:
+  model: TheBloke/Llama-2-7B-GPTQ
+  model_file: model.safetensors
+
+
