@@ -1,56 +1,61 @@
+
 # Chat With Your Docs
 
-in this repo I will create chatAPP using chatdocs and GPTQ
+Welcome to the **Chat With Your Docs** repository, where we explore the integration of ChatDocs and GPTQ quantization method for an interactive chat app with your documents!
 
-1. Quantizing the Model with AutoGPTQ
+## Quantizing the Model with AutoGPTQ
 
-in AutoGPTQ-transformers.ipynb Notebook, you will see how create quantize model using AutoGPTQ.
-in C Transformers (GPTQ).ipynb Notebook, you will see how you can use GPTQ model with CTransformer.
+In the `AutoGPTQ-transformers.ipynb` notebook, discover the process of creating a quantized model using AutoGPTQ. Additionally, in the `C Transformers (GPTQ).ipynb` notebook, explore how to utilize the GPTQ model with CTransformer.
 
-2. Chat App Development with ChatDocs
+## Chat App Development with ChatDocs
 
-## Installation 
+### Installation
 
--	To use GPTQ models, install the auto-gptq package using:
+1. To incorporate GPTQ models, install the `auto-gptq` package using:
 ```bash
 pip install chatdocs[gptq]
 ```
 
--	in the main directory create chatdocs.yml.
--	and add the following to your chatdocs.yml:
-```bash
+2. In the main directory, create `chatdocs.yml`.
+
+3. Add the following to your `chatdocs.yml`:
+```yaml
 llm: gptq
 ```
--	To change the GPTQ model, add and change the following in your chatdocs.yml:
 
-```bash
+4. To change the GPTQ models, modify your `chatdocs.yml` as follows:
+```yaml
 gptq:
     model: TheBloke/Llama-2-7B-GPTQ
     model_file: model.safetensors
 ```
-**Note: When you add a new model for the first time, run chatdocs download to download the model before using it.**
+**Note: When adding a new model for the first time, run `chatdocs download` to download the model before use.**
 
 ```bash
 chatdocs download
 ```
-## Usage
 
--	Add a directory containing documents to chat with using:
+### Usage
+
+1. Add a directory containing documents to engage in conversation with using:
 ```bash
 chatdocs add /path/to/documents
 ```
 
-The processed documents will be stored in db directory by default.
--	Chat with your documents using:
+The processed documents will be stored in the `db` directory by default.
+
+2. Chat with your documents:
 ```bash
 chatdocs ui
 ```
 
-Open http://localhost:5000 in your browser to access the web UI.
-It also has a nice command-line interface:
+Access the web UI at http://localhost:5000 in your browser.
+
+The command-line interface is also available:
 ```bash
 chatdocs chat
 ```
 
-for more Configuration visit Chatdocs repo: https://github.com/marella/chatdocs
+For further configuration options, visit the ChatDocs repository: [ChatDocs Repo](https://github.com/marella/chatdocs)
+
 
