@@ -34,7 +34,21 @@ gptq:
 ```bash
 chatdocs download
 ```
+###  CTransformers & GPTQ model:
 
+To change the C Transformers with GPTQ model, add and change the following in your `chatdocs.yml`:
+```yaml
+ctransformers:
+  model: TheBloke/Llama-2-7B-GPTQ
+  model_file: model.safetensors
+  model_type: gptq
+```
+You can also use an existing local model file:
+```yaml
+ctransformers:
+  model: /path/to/ggml-model.bin
+  model_type: gptq
+```
 ### Usage
 
 1. Add a directory containing documents to engage in conversation with using:
@@ -56,6 +70,10 @@ The command-line interface is also available:
 chatdocs chat
 ```
 
-For further configuration options, visit the ChatDocs repository: [ChatDocs Repo](https://github.com/marella/chatdocs)
+
+\
+\
+\
+**For further configuration options, visit the ChatDocs repository:** [ChatDocs Repo](https://github.com/marella/chatdocs)
 
 
